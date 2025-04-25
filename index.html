@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Empresa de Bienes Raíces</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function changeLanguage(language) {
+      const texts = {
+        es: {
+          welcome: "Bienvenido a Mi Empresa de Bienes Raíces",
+          about: "Sobre mí",
+          contact: "Contáctame",
+          products: "Propiedades Destacadas",
+          whatsapp: "Contacta por WhatsApp",
+          name: "Nombre",
+          email: "Correo electrónico",
+          message: "Mensaje",
+          send: "Enviar",
+          location: "Nuestra Ubicación",
+        },
+        en: {
+          welcome: "Welcome to My Real Estate Company",
+          about: "About Me",
+          contact: "Contact Me",
+          products: "Featured Properties",
+          whatsapp: "Contact via WhatsApp",
+          name: "Name",
+          email: "Email",
+          message: "Message",
+          send: "Send",
+          location: "Our Location",
+        },
+      };
+
+      document.getElementById("welcome-text").innerText = texts[language].welcome;
+      document.getElementById("about-text").innerText = texts[language].about;
+      document.getElementById("contact-text").innerText = texts[language].contact;
+      document.getElementById("products-text").innerText = texts[language].products;
+      document.getElementById("whatsapp-text").innerText = texts[language].whatsapp;
+      document.getElementById("name-placeholder").placeholder = texts[language].name;
+      document.getElementById("email-placeholder").placeholder = texts[language].email;
+      document.getElementById("message-placeholder").placeholder = texts[language].message;
+      document.getElementById("send-button").innerText = texts[language].send;
+      document.getElementById("location-text").innerText = texts[language].location;
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <nav class="bg-gray-900 text-white shadow p-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <img src="logo.png" alt="Logo" class="h-10 w-10 object-contain" />
+      <span class="text-xl font-semibold">Mi Empresa Real Estate</span>
+    </div>
+    <div class="space-x-4">
+      <button onclick="changeLanguage('es')" class="text-sm hover:text-yellow-400">Español</button>
+      <button onclick="changeLanguage('en')" class="text-sm hover:text-yellow-400">English</button>
+    </div>
+  </nav>
+
+  <section class="p-10 text-center bg-white shadow mt-6 max-w-4xl mx-auto rounded-2xl">
+    <h1 id="welcome-text" class="text-4xl font-bold mb-4 text-gray-900">Bienvenido a Mi Empresa de Bienes Raíces</h1>
+    <p class="text-lg text-gray-600">Ayudándote a encontrar la propiedad de tus sueños con confianza y profesionalismo.</p>
+  </section>
+
+  <section class="p-10 max-w-4xl mx-auto bg-white shadow mt-6 rounded-2xl">
+    <h2 id="about-text" class="text-3xl font-semibold mb-4 text-gray-900">Sobre mí</h2>
+    <div class="flex flex-col md:flex-row gap-6 items-center">
+      <img src="mi-foto.jpg" alt="Mi Foto" class="w-40 h-40 rounded-full object-cover border-4 border-yellow-400 shadow-md" />
+      <p class="text-base text-gray-700">
+        Soy un profesional del sector inmobiliario con amplia experiencia ayudando a mis clientes a comprar, vender o alquilar propiedades. Me comprometo a brindar un servicio honesto, transparente y eficiente.
+      </p>
+    </div>
+  </section>
+
+  <section class="p-10 max-w-6xl mx-auto bg-white shadow mt-6 rounded-2xl">
+    <h2 id="products-text" class="text-3xl font-semibold mb-6 text-center text-gray-900">Propiedades Destacadas</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg transition duration-300">
+        <img src="casa1.jpg" alt="Casa 1" class="rounded-xl mb-3">
+        <h3 class="text-xl font-semibold text-gray-800">Casa Familiar en las Afueras</h3>
+        <p class="text-sm text-gray-600">3 habitaciones, 2 baños, jardín amplio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-10 max-w-4xl mx-auto bg-white shadow mt-6 mb-10 rounded-2xl">
+    <h2 id="contact-text" class="text-3xl font-semibold mb-4 text-gray-900">Contáctame</h2>
+    <form class="space-y-4">
+      <input id="name-placeholder" type="text" placeholder="Nombre" class="w-full p-3 border border-gray-300 rounded-lg focus:border-yellow-400" required />
+      <input id="email-placeholder" type="email" placeholder="Correo electrónico" class="w-full p-3 border border-gray-300 rounded-lg focus:border-yellow-400" required />
+      <textarea id="message-placeholder" placeholder="Mensaje" class="w-full p-3 border border-gray-300 rounded-lg h-32 focus:border-yellow-400" required></textarea>
+      <button id="send-button" type="submit" class="bg-yellow-400 text-gray-900 font-semibold px-6 py-2 rounded hover:bg-yellow-500 transition duration-300">Enviar</button>
+    </form>
+    <a href="https://wa.me/tu-numero" target="_blank" id="whatsapp-text" class="inline-block mt-4 bg-green-600 text-white py-2 px-6 rounded-full hover:bg-green-700 transition">Contacta por WhatsApp</a>
+  </section>
+
+  <section class="p-10 max-w-4xl mx-auto bg-white shadow mt-6 rounded-2xl mb-10">
+    <h2 id="location-text" class="text-3xl font-semibold mb-4 text-gray-900">Nuestra Ubicación</h2>
+    <iframe class="w-full h-60 rounded-2xl" src="https://www.google.com/maps/embed?pb=tu-enlace-de-mapa" allowfullscreen loading="lazy"></iframe>
+  </section>
+
+</body>
+</html>
