@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keller Williams Realty Partners</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #000000, #2c2c2c, #bfbfbf);
+      color: #f0f0f0;
+    }
+    .red-line {
+      border-top: 3px solid #e11d48;
+    }
+    .red-accent {
+      color: #e11d48;
+    }
+  </style>
+</head>
+<body class="font-sans">
+
+  <nav class="bg-black shadow-md fixed top-0 w-full z-10 red-line">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <img src="logo.png" alt="Logo" class="h-10 w-10 object-contain" />
+        <span class="text-2xl font-bold tracking-wide text-white">Keller Williams Realty Partners</span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="pt-32 pb-20 text-center">
+    <h1 class="text-5xl font-extrabold mb-4 red-accent">Keller Williams Realty Partners</h1>
+    <p class="text-lg text-gray-300">Experts in finding your dream home with trust and style.</p>
+  </section>
+
+  <section class="max-w-6xl mx-auto py-20 px-6 grid md:grid-cols-2 gap-10 items-center">
+    <img src="my-photo.jpg" alt="My Photo" class="rounded-3xl shadow-lg w-full h-auto" />
+    <div>
+      <h2 class="text-4xl font-bold mb-6 red-accent">About Us</h2>
+      <p class="text-gray-300 leading-relaxed">
+        We are a team of dedicated real estate professionals providing a personalized and high-quality experience.
+        We pride ourselves on guiding you every step of the way to your new property.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 red-line">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 red-accent">Featured Properties</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="transform hover:scale-105 transition duration-300 bg-gray-800 p-6 rounded-2xl shadow">
+          <img src="house1.jpg" alt="House 1" class="rounded-2xl mb-4">
+          <h3 class="text-xl font-semibold text-white">Modern City House</h3>
+          <p class="text-gray-400 mt-2">4 bedrooms, 3 bathrooms, prime location.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-6 max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-10 red-accent">Contact Us</h2>
+    <form class="space-y-6">
+      <input type="text" placeholder="Name" class="w-full p-4 bg-gray-900 text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-400" required />
+      <input type="email" placeholder="Email" class="w-full p-4 bg-gray-900 text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-400" required />
+      <textarea placeholder="Message" class="w-full p-4 bg-gray-900 text-white border border-gray-600 rounded-lg h-32 focus:ring-2 focus:ring-red-400" required></textarea>
+      <button type="submit" class="bg-red-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-red-700 transition">Send</button>
+    </form>
+    <div class="text-center mt-8">
+      <a href="https://wa.me/your-number" target="_blank" class="inline-block bg-green-500 text-white py-3 px-6 rounded-full hover:bg-green-600 transition">Contact via WhatsApp</a>
+    </div>
+  </section>
+
+  <section class="py-20 red-line">
+    <h2 class="text-4xl font-bold text-center mb-10 red-accent">Our Location</h2>
+    <div class="max-w-5xl mx-auto px-6">
+      <iframe 
+        class="w-full h-80 rounded-2xl" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.799415400442!2d-73.1334056240241!3d41.20414247130556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e80c1fded41807%3A0x6ac0b4e30e1e24c5!2s2396%20Main%20St%2C%20Stratford%2C%20CT%2006614%2C%20USA!5e0!3m2!1sen!2sus!4v1714332957006!5m2!1sen!2sus" 
+        allowfullscreen 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <footer class="bg-black text-gray-400 py-8 text-center">
+    <p class="text-sm">&copy; 2025 Keller Williams Realty Partners. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
